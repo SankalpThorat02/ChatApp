@@ -1,0 +1,18 @@
+.chats {
+    background: linear-gradient(135deg, #FCF6BD, #D0F4DE);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 16px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.chats:hover {
+    box-shadow:  0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.msg {
+    color: #212738;
+}
