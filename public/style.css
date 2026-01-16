@@ -16,3 +16,23 @@
 .msg {
     color: #212738;
 }
+
+.btn {
+    background-color: #3c91e6;
+    color: white;
+    border: none;
+
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

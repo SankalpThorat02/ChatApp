@@ -11,6 +11,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({extended: true}));
 
 main().then(() => console.log("Connection Successful"))
     .catch((err) => console.log(err));
@@ -31,4 +32,16 @@ app.get('/', (req, res) => {
 app.get('/chats', async (req, res) => {
     let chats = await Chat.find();
     res.render("home.ejs", {chats});
+})
+
+//New Route 
+app.get('/chats/new', (req, res) => {
+    res.render("newChat.ejs");
+})
+
+//Update Route 
+app.post('/chats', async (req, res) => {
+    let {from, to, msg} = req.body;
+    await Chat.insertOne({from, to, msg, created_at: new Date()});
+    res.redirect('/chats');
 })
