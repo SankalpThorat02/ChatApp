@@ -39,7 +39,7 @@ app.get('/chats/new', (req, res) => {
     res.render("newChat.ejs");
 })
 
-//Update Route 
+//Create Route 
 app.post('/chats', async (req, res) => {
     let {from, to, msg} = req.body;
     await Chat.insertOne({from, to, msg, created_at: new Date()});
