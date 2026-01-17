@@ -71,7 +71,7 @@ app.patch('/chats/:id', async (req, res) => {
     let {id} = req.params;
     let {msg} = req.body;
 
-    let chat = await Chat.findByIdAndUpdate(id, {msg}, {new: true});
+    let chat = await Chat.findByIdAndUpdate(id, {msg}, {runValidators: true, new: true});
     res.redirect('/chats');
 })
 

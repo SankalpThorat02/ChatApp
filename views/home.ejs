@@ -17,7 +17,7 @@
             <h3> From: <%= chat.from %> </h3>
             <h3> To: <%= chat.to %></h3>
             <p class="msg"> <form action="/chats/<%= chat._id %>/edit" class="edit-form"> <button class="edit"> <i class="fa-solid fa-pen-to-square"></i> </button></form> Message: <%= chat.msg %></p> 
-            <p> <%= chat.created_at.toString().split(" ")[4] %> <%= chat.created_at.toString().split(" ").slice(0, 4).join(" ") %></p>
+            <p> <%= chat.created_at.toString().split(" ")[4] %> &nbsp; <%= chat.created_at.toString().split(" ").slice(0, 4).join(" ") %></p>
             <form action="/chats/<%= chat.id %>?_method=DELETE" method="post"> <button class="delete-btn"> Delete </button></form>
         </div> 
     <% } %>
