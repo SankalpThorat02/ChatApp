@@ -67,3 +67,10 @@ app.patch('/chats/:id', async (req, res) => {
     let chat = await Chat.findByIdAndUpdate(id, {msg}, {new: true});
     res.redirect('/chats');
 })
+
+//Delete
+app.delete('/chats/:id', async (req, res) => {
+    let {id} = req.params;
+    let chat = await Chat.findByIdAndDelete(id);
+    res.redirect('/chats');
+})
