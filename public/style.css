@@ -43,7 +43,7 @@
 
 .edit {
     border: none;
-    background-color: none;
+    background-color: inherit;
     color: #212738;
     font-size: 16px;
     cursor: pointer;
@@ -75,4 +75,9 @@
 
 .delete-btn:active {
     transform: translateY(0px);
+}
+
+input, textarea {
+    padding: 5px;
+    margin: 5px;
 }

@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>  
-    <form action="/chats" method="post">
-        <input type="text" name="from" placeholder="Your Name">
-        <input type="text" name="to" placeholder="Send To">
-        <textarea name="msg" placeholder="Send Message"></textarea>
-        <button class="btn"> Send </button>
-    </form>
+    <div class="chats">
+        <form action="/chats" method="post">
+            <input type="text" name="from" placeholder="Your Name" id="from"> <br>
+            <input type="text" name="to" placeholder="Send To" id="to"> <br>
+            <textarea name="msg" placeholder="Message" id="msg"></textarea>
+            <button class="btn"> Send </button>
+        </form>
+    </div>
 </body>
 </html>

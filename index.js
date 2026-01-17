@@ -47,7 +47,14 @@ app.get('/chats/new', (req, res) => {
 //Create Route 
 app.post('/chats', async (req, res) => {
     let {from, to, msg} = req.body;
-    await Chat.insertOne({from, to, msg, created_at: new Date()});
+    let newChat = new Chat({
+        from: from,
+        to: to,
+        msg: msg,
+        created_at: new Date(),
+    });
+
+    await newChat.save();
     res.redirect('/chats');
 })
 
